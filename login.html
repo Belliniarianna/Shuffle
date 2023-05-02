@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SHUFFLE home</title>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!--google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet"> <!--Righteouse-->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet"> <!--roboto condensed-->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap" rel="stylesheet"> <!--roboto slab-->
+            <!-- fontawsom -->
+        <script src="https://kit.fontawesome.com/532599bbd7.js" crossorigin="anonymous"></script>
+            <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            <!--File css mio-->
+        <link rel="stylesheet" href="css/style.css">
+            <!--favicon-->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    </head>
+
+    <body class="container-fluid">
+      
+        <header>
+            <div class="row justify-content-between">
+                <div class="col-1">
+                    <a href="index.html">
+                        <img class="logo" src="imm/logo.svg" alt="S"/>
+                    </a>
+                </div>
+                <div class="col-10">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav justify-content-end nav nav-tabs">
+                                <li class="nav-item ">
+                                    <a class="nav-link " href="index.html">HOME</a>
+                                </li>
+                                <li class="nav-item ">
+                                  <a class="nav-link" href="comesigioca.html">COME SI GIOCA</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="lemieplaylist.html">LE MIE PLAYLIST</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="documentazione.html">DOCUMENTAZIONE</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a id="log" class="nav-link" href="login.html">
+                                        <i class="fa-solid fa-user" style="color:white;font-size:15px"></i> LOG IN
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                      </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="c-princ">
+            <h2 id="title-login">Accedi a shuffle </h2>
+            <div id="breadcrumb">
+                <a href="index.html">home</a><a href="#"> / log in</a>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-7 box">
+                    <form action="#" method="post">
+    <!--e-mail-->       <div class="row">
+                            <div class="col-6 etichette">
+                                <label>E-mail:</label>    
+                            </div>
+                            <div class="col-6 campi">
+                                <input type="email" name="e-mail" class="testo" placeholder="e-mail..." /></br></br>
+                            </div>
+                        </div>
+     <!--password-->    <div class="row">
+                            <div class="col-6 etichette">
+                                <label>Password:</label>    
+                            </div>
+                            <div class="col-6 campi">
+                                <input type="password" name="password" class="testo" placeholder="password..." /></br></br>
+                            </div>
+                        </div>     
+                    </form>
+                    <button type="button" class="blackbutton">ACCEDI</button>
+                    <section class="smalltext">Non hai un account? <a href="registrazione.html">Registrati</a></section>
+                </div>
+            </div>
+        </div>
+
+        <footer class="container-fluid">
+            <div class="row justify-content-between">
+                <div class="col-2">
+                    <a href="index.html">
+                        <img class="logo" src="imm/logo.svg" alt="S"/>
+                    </a>
+                </div>
+                <div class="col-6">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">home</a></li>
+                            <li><a href="comesigioca.html">come si gioca</a></li>
+                            <li><a href="lemieplaylist.html">le mie playlist</a></li>
+                            <li><a href="Documentazione.html">documentazione</a></li>
+                        </ul>
+                    </nav>
+                    <p>Sito creato da Bellini Arianna</p>
+                </div>
+                <div class="col-2">
+                        <p>Contattaci e seguici sui social!</p> 
+                        <a href="mailto:shuffle.info@gmail.com" target="_blank"><i class="fa-regular fa-envelope fa-2x" style="color: #1b1b1b;"></i></a> 
+                        <a href="https://instagram.com/shuffle2.0?igshid=ZDdkNTZiNTM=" target="_blank"><i class="fa-brands fa-instagram fa-2x" style="color: #1b1b1b;"></i></a>
+                        <a href="" target="_blank"></a><i class="fa-brands fa-tiktok fa-2x" style="color: #1b1b1b;"></i></a>
+                </div>
+            </div>
+            
+        </footer>
+   
+    </body>
+</html>
