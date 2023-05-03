@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>SHUFFLE home</title>
+        <title>SHUFFLE - log in</title>
         
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <!--google Analytics--> 
+         <script async src="https://www.googletagmanager.com/gtag/js?id=G-CP77FS6H0M"></script>
+         <script>
+             window.dataLayer = window.dataLayer || [];
+             function gtag(){dataLayer.push(arguments);}
+             gtag('js', new Date());
+ 
+             gtag('config', 'G-CP77FS6H0M');
+         </script>
             <!--google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,26 +79,36 @@
                 <a href="index.html">home</a><a href="#"> / log in</a>
             </div>
             
+            
             <div class="row justify-content-center">
-                <div class="col-7 box">
-                    <form action="#" method="post">
-    <!--e-mail-->       <div class="row">
-                            <div class="col-6 etichette">
-                                <label>E-mail:</label>    
-                            </div>
-                            <div class="col-6 campi">
-                                <input type="email" name="e-mail" class="testo" placeholder="e-mail..." /></br></br>
-                            </div>
+                <div class="col-8 box">
+                    <div class="row justify-content-center">
+                        <div class="col" id="social-login">
+                            <a href="#" class="fb btn" id="fb">
+                                <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                              </a></br>
+                              <a href="#" class="twitter btn" id="twitter">
+                                <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+                              </a></br>
+                              <a href="#" class="google btn" id="google">
+                                <i class="fa fa-google fa-fw"></i> Login with Google+
+                            </a>
                         </div>
-     <!--password-->    <div class="row">
-                            <div class="col-6 etichette">
-                                <label>Password:</label>    
-                            </div>
-                            <div class="col-6 campi">
-                                <input type="password" name="password" class="testo" placeholder="password..." /></br></br>
-                            </div>
-                        </div>     
-                    </form>
+                        <div class="col">
+                            <form action="#" method="post">
+        <!--e-mail-->      
+                            
+                                    <label class="edichette">E-mail:</label> </br>   
+                                    <input type="email" name="e-mail" class="testo" placeholder="e-mail..." /></br></br>
+                               
+        <!--password-->   
+                                    <label class="etichette">Password:</label>  </br>    
+                               
+                                    <input type="password" name="password" class="testo" placeholder="password..." /></br></br>
+                                  
+                            </form>
+                        </div>
+                    </div>
                     <button type="button" class="blackbutton">ACCEDI</button>
                     <section class="smalltext">Non hai un account? <a href="registrazione.html">Registrati</a></section>
                 </div>
