@@ -101,6 +101,15 @@ h3{
     font-size: 1.3em;
     line-height: 2em;
 }
+h4{
+    font-weight: 500;
+    font-size: 1.3em;
+    color:#ac1593;
+}
+b{
+    color:#ac1593;
+    font-weight: 500;
+}
 .purplebutton                                   /*bottoni sfondo viola*/
 {
     background-color: #ac1593;
@@ -294,6 +303,7 @@ section a{
 }
 section a:hover{
     font-size: 1.1em;
+    color: white;
 }
 
 .playlist{
@@ -316,4 +326,25 @@ section a:hover{
 }
 .card-footer i{
     margin: 5px;
+}
+
+/*grafica della documentazione*/
+.template{
+    text-align: center;
+    max-width: 500px;
+    margin:0 20px 20px 0;
+    border: solid 1.5px white;
+}
+figure{
+    margin: 0px;
+    display: inline-block;
+}
+figcaption{
+    text-align: center;
+    font-size: 1em;
+    margin:0;
+}
+#qrcode{
+    float: right;
+    max-width: 100%;
 }
