@@ -90,7 +90,7 @@
                                 <label>Inserisci la tua e-mail*:</label>    
                             </div>
                             <div class="col-6 campi">
-                                <input type="email" name="e-mail" class="testo" placeholder="e-mail..." /></br></br>
+                                <input type="text" autocomplete="off" name="e-mail" class="input" placeholder="e-mail">
                             </div>
                         </div>
     <!--password-->     <div class="row">
@@ -98,7 +98,7 @@
                                 <label>Crea una password*:</label>    
                             </div>
                             <div class="col-6 campi">
-                                <input type="password" name="password" class="testo" placeholder="password..." /></br></br>
+                                <input type="password" autocomplete="off" name="password" class="input" placeholder="password">
                             </div>
                         </div>                            
     <!--nome-->         <div class="row">
@@ -106,7 +106,7 @@
                                 <label>Inserisci il tuo nome:</label>   
                             </div>
                             <div class="col-6 campi">
-                                <input type="text" name="nome" class="testo" placeholder="nome..." /></br></br>
+                                <input type="text" autocomplete="off" name="nome" class="input" placeholder="nome">
                             </div>
                         </div>            
     <!--cognome-->      <div class="row">
@@ -114,7 +114,7 @@
                                 <label>Inserisci il tuo cognome:</label>  
                             </div>
                             <div class="col-6 campi">
-                                <input type="text" name="cognome" class="testo" placeholder="cognome..." /></br></br>
+                                <input type="text" autocomplete="off" name="cognome" class="input" placeholder="cognome">
                             </div>
                         </div>                               
 <!--data nascita-->     <div class="row">
@@ -122,7 +122,7 @@
                                 <label>Inserisci la tua data di nascita*:</label> 
                             </div>
                             <div class="col-6 campi">
-                                <input type="date" name="data-nascita" class="campi-spazio"></br></br>
+                                <input type="date" name="data-nascita" class="input">
                             </div>
                         </div>                               
     <!--sesso-->        <div class="row">
@@ -140,16 +140,22 @@
                                 <label for="non_spec">Preferisco non specificarlo</label></br></br>
                             </div>
                         </div> 
-                        <div class="row">
+    <!--foto-->        <div class="row">
                             <div class="col-6 etichette">
                                 <label for="foto">Scegli la tua foto profilo</label>
                             </div>
                             <div class="col-6 campi">
-                                <input type="file"></br></br>
+                                   <input id="file" type="file">
+                                    <label class="avatar" for="file"><span> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path fill="#ffffff" d="M17.1813 16.3254L15.3771 14.5213C16.5036 13.5082 17.379 12.9869 18.2001 12.8846C19.0101 12.7837 19.8249 13.0848 20.8482 13.8687C20.8935 13.9034 20.947 13.9202 21 13.9202V15.024C21 19.9452 19.9452 21 15.024 21H8.976C4.05476 21 3 19.9452 3 15.024V13.7522C3.06398 13.7522 3.12796 13.7278 3.17678 13.679L4.45336 12.4024C5.31928 11.5365 6.04969 10.8993 6.71002 10.4791C7.3679 10.0605 7.94297 9.86572 8.50225 9.86572C9.06154 9.86572 9.6366 10.0605 10.2945 10.4791C10.9548 10.8993 11.6852 11.5365 12.5511 12.4024L16.8277 16.679C16.9254 16.7766 17.0836 16.7766 17.1813 16.679C17.2789 16.5813 17.2789 16.423 17.1813 16.3254Z" opacity="0.1"></path> <path stroke-width="2" stroke="#ffffff" d="M3 8.976C3 4.05476 4.05476 3 8.976 3H15.024C19.9452 3 21 4.05476 21 8.976V15.024C21 19.9452 19.9452 21 15.024 21H8.976C4.05476 21 3 19.9452 3 15.024V8.976Z"></path> <path stroke-linecap="round" stroke-width="2" stroke="#ffffff" d="M17.0045 16.5022L12.7279 12.2256C9.24808 8.74578 7.75642 8.74578 4.27658 12.2256L3 13.5022"></path> <path stroke-linecap="round" stroke-width="2" stroke="#ffffff" d="M21.0002 13.6702C18.907 12.0667 17.478 12.2919 15.1982 14.3459"></path> <path stroke-width="2" stroke="#ffffff" d="M17 8C17 8.55228 16.5523 9 16 9C15.4477 9 15 8.55228 15 8C15 7.44772 15.4477 7 16 7C16.5523 7 17 7.44772 17 8Z"></path> </g></svg></span>
+                                   </label> scegli file
                             </div>
                         </div>    
-<!--termini/condiz-->   <input type="checkbox" name="termini">
-                        <label for="termini"> Accetto i <a href="#">termini e le condizioni d'uso di Shuffle*</a></label><br>
+<!--termini/condiz-->   <label class="container-term">
+                        <input type="checkbox">
+                        <svg viewBox="0 0 64 64" height="1em" width="1em">
+                            <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="path"></path>
+                        </svg> Accetto i <a href="#">termini e le condizioni d'uso di Shuffle*</a>
+                        </label>
                         <p>*campi obbligatori</p>
                         <button type="button" class="blackbutton">ISCRIVITI</button>
                         <section class="smalltext">

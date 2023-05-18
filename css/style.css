@@ -110,26 +110,84 @@ b{
     color:#ac1593;
     font-weight: 500;
 }
-.purplebutton                                   /*bottoni sfondo viola*/
-{
-    background-color: #ac1593;
-    font-size: 1.5em;
-    text-align: center;
+/*bottoni*/ 
+.blackbutton {
+    --color: #ac1593;
+    background-color: #1B1B1B;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #1B1B1B;
+    transition: color .5s;
+    z-index: 1;
+    font-size: 24px;
     border-radius: 12px;
     color: white;
-    text-decoration: none;
-    font-family: 'Roboto Condensed', sans-serif;
-    border: solid 1px #ac1593;
-    padding: 16px 24px;
-    transition-duration: .25s;
-}
-.purplebutton:hover{                       
-    width:200px;
-    height: auto;
-    font-size: 2em;
-    text-align: center;
 }
 
+.purplebutton {
+    --color: #1B1B1B;
+    background-color: #ac1593;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border:2px solid #ac1593;
+    transition: color .5s;
+    z-index: 1;
+    font-size: 24px;
+    border-radius: 12px;
+    color: var(--color);
+}
+
+button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 170px;
+    width:300px;
+    border-radius: 50%;
+}
+   
+.blackbutton:hover {
+    color: #1B1B1B;
+}
+
+.purplebutton:hover {
+    color: #fff;
+}
+
+   
+button:before {
+    top: 100%;
+    left: 100%;
+    transition: all .5s;
+}
+   
+button:hover:before {
+    top: -30px;
+    left: -30px;
+}
+   
+.blackbutton:active:before {
+    background: #ac1593;
+    transition: background 0s;
+}
+
+.purplebutton:active:before {
+background: #1B1B1B;
+transition: background 0s;
+}
 
 /*grafica footer*/
 
@@ -184,35 +242,21 @@ form{
     border-radius:10px;
     text-align: center;
 }
-input{
-    border-radius: 5px;
+
+.input {
     border: none;
-    margin-left:4px;
-}
-.blackbutton{                                           /*bottoni sfondo nero*/
-    background-color: #1B1B1B;
-    font-size: 1.5em;
-    text-align: center;
-    border-radius: 12px;
-    color: white;
-    font-family: 'Roboto Condensed', sans-serif;
-    border: solid 1px #ac1593;
-    padding: 10px 30px;
-    margin: 20px 0px 40px 0;
-    transition-duration:.25s;
-}
-.blackbutton:hover{
-    height: 65px;
-    width: auto;
-    font-size: 1.6em;
-    text-align: center;
-}
-.blackbutton a{
-    color: white;
-}
-.blackbutton a:hover{
-    text-decoration: none;
-}
+    outline: none;
+    padding: 5px;
+    margin: 8px;
+    border-radius: 15px;
+    background-color: #ccc;
+    transition: 300ms ease-in-out;
+  }
+  
+  .input:focus {
+    background-color: white;
+  }
+
 .smalltext{
     font-size: 16px;
     transition-duration: .15s;
@@ -247,6 +291,8 @@ input{
 
 }
 /*pagina di registrazione*/
+
+
 .etichette{
     text-align:right;
 }
@@ -270,6 +316,51 @@ form p{
     font-size: 16px;
 }
 
+.container-term {
+    cursor: pointer;
+  }
+  
+  .container-term input {
+    display: none;
+  }
+  
+  .container-term svg {
+    overflow: visible;
+  }
+  
+  .path {
+    fill: none;
+    stroke: white;
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+    stroke-dasharray: 241 9999999;
+    stroke-dashoffset: 0;
+  }
+  
+  .container-term input:checked ~ svg .path {
+    stroke-dasharray: 70.5096664428711 9999999;
+    stroke-dashoffset: -262.2723388671875;
+  }
+
+ 
+  
+  .avatar {
+    height: 40px;
+    width: 40px;
+    background-color: #1B1B1B;
+    border-radius: 12px;
+    align-self: center;
+    padding: 6px;
+    cursor: pointer;
+  }
+ 
+  #file {
+    display: none;
+  }
+
+  
 /*grafica per play e nuova partita*/
 
 .playspace{
@@ -288,7 +379,8 @@ form p{
 .si-no{
     font-size: 20px;
     margin:5px;
-    padding: 10px 20px;
+    padding: 5px 10px;
+    text-align: center;
 }
 .si-no:hover{
     font-size: 22px;
@@ -328,6 +420,9 @@ section a:hover{
     margin: 5px;
 }
 
+
+
+
 /*grafica della documentazione*/
 .template{
     text-align: center;
@@ -347,4 +442,29 @@ figcaption{
 #qrcode{
     float: right;
     max-width: 100%;
+}
+
+/*bottone torna su*/
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 200px; 
+    right: 30px;
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; 
+    outline: none; 
+    background-color: #ac1593; 
+    color: #1B1B1B; 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    transition: color 0.5s;
+  }
+#myBtn:hover{
+    background-color: #1B1B1B;
+    color:#ac1593;
+    border: 2px solid #ac1593;
 }

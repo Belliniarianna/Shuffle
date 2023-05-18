@@ -81,6 +81,9 @@
             <div id="breadcrumb">
                 <a href="index.html">home</a><a href="#"> / come si gioca</a>
             </div>
+            <button onclick="topFunction()" id="myBtn" title="Go to top">
+                <i class="fa-solid fa-arrow-up fa-sm"></i>
+            </button>
             <section>
                 Shuffle è un gioco che ti permette di sfidare i tuoi amici, capendo chi conosce meglio i gusti musicali degli altri, e intanto scoprire nuove canzoni. </br>
                 Giocare è molto semplice: clicca sul bottone <a href="play.html">GIOCA ORA</a> e verrai reinderizzato alla pagina della partita.
@@ -102,9 +105,12 @@
                 <h3>Cosa sono Le mie playlist?</h3>
                 Se la playlist della partita ti è piaciuta puoi decidere di salvarla nella sezione <a href="lemieplaylist.html">LE MIE PLAYLIST</a> e riascoltarla quando vuoi.</br>
                 Così, ogni volta che sarete in macchina insieme, dovrete fare una festa o semplicemente non riuscirete a mettervi d'accordo su cosa ascoltare, ti basterà far partire la playlist di Shuffle per accontentare tutti!
-            </section>
+            </section> 
         </div>
 
+        
+       
+        
         <footer>
             <div class="row justify-content-between" id="bianco" >
                 <div class="col">
@@ -131,6 +137,20 @@
                 </div>
             </div>
         </footer>
-
+        <script>
+            let mybutton = document.getElementById("myBtn");
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+            function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+            </script>
     </body>
 </html>

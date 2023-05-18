@@ -81,6 +81,9 @@
             <div id="breadcrumb">
                 <a href="index.html">home</a><a href="#"> / documentazione</a>
             </div>
+            <button onclick="topFunction()" id="myBtn" title="Go to top">
+                <i class="fa-solid fa-arrow-up fa-sm"></i>
+            </button>
             <section>
                 <h3>Abstract</h3>
                 <p>Shuffle è un sito che permette a gruppi di ragazzi di sfidarsi per vedere quanto conoscono i gusti 
@@ -160,7 +163,7 @@
                 <h4>Linguaggi e strumenti</h4>
                 <p>Linguaggi: HTML, CSS, JavaScript</p>
                 <p>Altri strumenti: Google fonts (per i font), Font Awesome (per le icone), Coolors (per la 
-                    scelta dei colori e per la funzione 'contrast checker'), Bootstrap (per la grafica), Github 
+                    scelta dei colori e per la funzione 'contrast checker'), Bootstrap, w3schools e uiverse.io (per la grafica), Github 
                     (per la pubblicazione), Google Analytics (per la valutazione dei risultati) e Illustrator (per il logo, il 
                     qr code e le immagini).
                 </p>
@@ -257,6 +260,20 @@
                 </div>
             </div>
         </footer>
-   
+        <script>
+            let mybutton = document.getElementById("myBtn");
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+            function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+            </script>
     </body>
 </html>
