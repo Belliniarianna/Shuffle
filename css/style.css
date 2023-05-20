@@ -444,6 +444,10 @@ figcaption{
     max-width: 100%;
 }
 
+.ig{
+    max-height: 500px;
+    width: auto;
+}
 /*bottone torna su*/
 
 #myBtn {
